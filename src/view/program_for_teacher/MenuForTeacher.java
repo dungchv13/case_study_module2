@@ -68,14 +68,25 @@ public class MenuForTeacher {
         notificationManage.readComplaints();
     }
 
-    public void menu8(){
+    public void menu8(String id){
         System.out.print("Enter notifications: ");
         String mess = input.inputStr(".+");
 
-        notificationManage.sendNotificationToStudent(manager,mess);
+        notificationManage.sendNotificationToStudent(teacherManage.searchTeacher(id), mess);
     }
     public void menu9(){
-        notificationManage.readStudentNote();
+        notificationManage.readNotification();
+    }
+    public void menu10(){
+        ArrayList<Student> studentList = studentManage.getStudentList();
+        System.out.println("rule: 1 is true,0 is false");
+        for (Student stu:studentList) {
+            System.out.print("Student(id:"+stu.getId()+", name:"+stu.getName()+") is present ?:");
+            String isPresent = input.inputStr("[01]");
+            if(isPresent.equals("0")){
+                notificationManage.writeStudentsLate(stu);
+            }
+        }
     }
 
 }

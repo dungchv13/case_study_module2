@@ -13,4 +13,14 @@ public class Manager extends Person {
         }
         return instance;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "name='" + super.getName() + '\'' +
+                ", birthDay='" + super.getBirthDay() + '\'' +
+                ", mail='" + super.getMail() + '\'' +
+                ", phone='" + super.getPhone() + '\'' +
+                "} ";
+    }
 }

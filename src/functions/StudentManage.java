@@ -14,6 +14,7 @@ public class StudentManage {
 
     private ArrayList<Student> studentList;
 
+
     public void addStudent(Student stu){
         studentList = (ArrayList<Student>) binary.readFile(BINARY_PATH);
         if(studentList == null){

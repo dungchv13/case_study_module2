@@ -38,9 +38,10 @@ public class TeacherProgram {
             System.out.println("7.Xem than phiền của học viên.");
             System.out.println("8.Gửi thông báo tới học viên.");
             System.out.println("9.Xem các thông báo đã gửi tới học viên.");
+            System.out.println("10.Điểm danh đi muộn.");
             System.out.println("0.Exit.");
             System.out.print("Chose:");
-            int choice = Integer.parseInt(input.inputStr("[0-9]"));
+            int choice = Integer.parseInt(input.inputStr("\\d{1,2}"));
             switch (choice){
                 case 1:
                     System.out.println("*************************");
@@ -79,21 +80,24 @@ public class TeacherProgram {
                     break;
                 case 8:
                     System.out.println("*************************");
-                    menu.menu8();
+                    menu.menu8(id);
                     System.out.println("*************************");
                     break;
                 case 9:
                     System.out.println("*************************");
                     menu.menu9();
                     System.out.println("*************************");
+                    break;
+                case 10:
+                    System.out.println("*************************");
+                    menu.menu10();
+                    System.out.println("*************************");
+                    break;
                 case 0:
                     System.exit(0);
+                default:
+                    System.out.println("Chưa có chúc năng này!");
             }
-
-
-
-
-
 
         }while(true);
     }

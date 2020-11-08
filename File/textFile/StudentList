@@ -1,0 +1,3 @@
+Student{id='0002', name='Minh Duc', birthDay='1/1/1992', mail='ascas@gmail.com', phone='(25)-(0111111111)', className='C0820K1'} 
+Student{id='0003', name='Manh Dung', birthDay='16/1/1996', mail='dungutc13@gmail.com', phone='(84)-(0961106056)', className='C0820K1'} 
+Student{id='0001', name='Nguyen', birthDay='1/1/1996', mail='sadaw@gmail.com', phone='(84)-(0777777777)', className='C0820K1'} 

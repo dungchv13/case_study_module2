@@ -12,7 +12,7 @@ public class NotificationManage {
     private final String WISHES_PATH = "File/textFile/Notification/Wishes";
     private final String COMPLAINTS_PATH = "File/textFile/Notification/Complaints";
     private final String NOTIFICATION_TO_STUDENT = "File/textFile/Notification/NotificationToStudent";
-    private final String STUDENT_LATE_FOR_CLASS = "File/textFile/Notification/NotificationToStudent";
+    private final String STUDENT_LATE_FOR_CLASS = "File/textFile/StudentsLateForClassList";
     private final String TRANSCRIPT = "File/textFile/Transcript";
 
     private TextFileProcess text = new TextFileProcess();
@@ -58,7 +58,7 @@ public class NotificationManage {
         }
         System.out.println("Link to file text: "+COMPLAINTS_PATH);
     }
-    public void readLateList(){
+    public void readStudentLateFile(){
         ArrayList<String> lateList = text.readFile(STUDENT_LATE_FOR_CLASS);
         if(lateList == null){
             System.out.println("Không có học sinh đi muộn!");
@@ -70,7 +70,7 @@ public class NotificationManage {
         System.out.println("Link to file text: "+STUDENT_LATE_FOR_CLASS);
 
     }
-    public void readStudentNote(){
+    public void readNotification(){
         ArrayList<String> notificationList = text.readFile(NOTIFICATION_TO_STUDENT);
         if(notificationList == null){
             System.out.println("Không có thông báo nào cả!");
@@ -84,12 +84,12 @@ public class NotificationManage {
 
 
 
-    public void addStudentToLateForClassList(Student student,String mins){
+    public void writeStudentsLate(Student student){
         ArrayList<String> lateList = text.readFile(STUDENT_LATE_FOR_CLASS);
         if(lateList == null){
             lateList = new ArrayList<>();
         }
-        String str = LocalDate.now() +": Student(id:"+student.getId()+", name:"+student.getName()+"): "+mins;
+        String str = LocalDate.now() +": Student{id:"+student.getId()+", name:"+student.getName()+"}";
         lateList.add(str);
         text.writeFile(lateList,STUDENT_LATE_FOR_CLASS);
     }

@@ -1,10 +1,13 @@
 package view.program_for_student;
 
 import entities.Manager;
+import entities.Teacher;
 import functions.NotificationManage;
 import functions.StudentManage;
 import functions.TeacherManage;
 import view.validate.ValidateInput;
+
+import java.util.ArrayList;
 
 public class MenuForStudent {
         ValidateInput input = new ValidateInput();
@@ -36,10 +39,13 @@ public class MenuForStudent {
         notificationManage.writeWishes(studentManage.searchStudent(id), mess);
     }
     public void menu5(){
-        teacherManage.displayAllTeacher();
+        ArrayList<Teacher> teacherList = teacherManage.getTeacherList();
+        for (Teacher tea: teacherList) {
+            System.out.println("Teacher{ name:"+tea.getName()+", birthday:"+tea.getBirthDay()+", email:"+tea.getMail()+", phone number:"+tea.getPhone()+" }");
+        }
         System.out.println(manager.toString());
     }
     public void menu6(){
-        notificationManage.readStudentNote();
+        notificationManage.readNotification();
     }
 }
