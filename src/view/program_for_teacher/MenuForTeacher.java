@@ -29,7 +29,7 @@ public class MenuForTeacher {
         ArrayList<String> transcript = new ArrayList<>();
         for (Student stu:studentList) {
             System.out.print("Enter mark for Student(id:"+stu.getId()+", name:"+stu.getName()+"):");
-            double mark = Double.parseDouble(input.inputStr("\\d"));                                  //chua xong
+            double mark = Double.parseDouble(input.inputStr("0?\\d|10"));
             stu.setMark(mark);
             transcript.add("Student(id:"+stu.getId()+", name:"+stu.getName()+"): "+mark);
         }
@@ -47,7 +47,7 @@ public class MenuForTeacher {
         for (Student stu:studentList) {
             if(stu.getId().equals(id)){
                 System.out.print("Enter mark for Student(id:"+stu.getId()+", name:"+stu.getName()+"):");
-                double mark = Double.parseDouble(input.inputStr("\\d"));
+                double mark = Double.parseDouble(input.inputStr("0?\\d|10"));
                 stu.setMark(mark);
             }
             transcript.add("Student(id:"+stu.getId()+", name:"+stu.getName()+"): "+stu.getMark());

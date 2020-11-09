@@ -41,7 +41,7 @@ public class TeacherProgram {
             System.out.println("10.Điểm danh đi muộn.");
             System.out.println("0.Exit.");
             System.out.print("Chose:");
-            int choice = Integer.parseInt(input.inputStr("\\d{1,2}"));
+            int choice = Integer.parseInt(input.inputStr("0?\\d|10"));
             switch (choice){
                 case 1:
                     System.out.println("*************************");

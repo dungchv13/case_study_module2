@@ -1,1 +1,2 @@
-Teacher{id='3789', name='Son', birthDay='9/12/1988', mail='asdwwd@gmail.com', phone='(84)-(0999666333)'subject='PHP', salary=987654.0} 
+Teacher{id='1234', name='Son', birthDay='1/1/1900', mail='jhrjfw@gmail.com', phone='1593687420'subject='Java', salary=1.8941656E7} 
+Teacher{id='5678', name='Toan', birthDay='15/5/1988', mail='jkrjgre@gmail.com', phone='0321569874'subject='PHP', salary=8.8446598E7} 

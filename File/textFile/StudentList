@@ -1,3 +1,4 @@
-Student{id='0002', name='Minh Duc', birthDay='1/1/1992', mail='ascas@gmail.com', phone='(25)-(0111111111)', className='C0820K1'} 
-Student{id='0003', name='Manh Dung', birthDay='16/1/1996', mail='dungutc13@gmail.com', phone='(84)-(0961106056)', className='C0820K1'} 
-Student{id='0001', name='Nguyen', birthDay='1/1/1996', mail='sadaw@gmail.com', phone='(84)-(0777777777)', className='C0820K1'} 
+Student{id='0002', name='Thu Cuc', birthDay='1/1/1994', mail='sdqwdqwd@gmail.com', phone='0123456789', className='C0820K1'} 
+Student{id='0001', name='Minh Duc', birthDay='1/1/1992', mail='wqeqw@gmail.com', phone='7894561230', className='C0820K1'} 
+Student{id='0004', name='Cong Hieu', birthDay='1/1/1994', mail='rjvrekj@gmail.com', phone='3578694210', className='C0820K1'} 
+Student{id='0003', name='Manh Dung', birthDay='1/1/1996', mail='yunh@gmail.com', phone='7891234560', className='C0820K1'} 

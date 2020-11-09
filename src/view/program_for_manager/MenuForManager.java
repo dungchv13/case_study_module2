@@ -48,9 +48,10 @@ public class MenuForManager {
     public void menu3(){
         System.out.print("Enter student id(bốn chữ số): ");
         String id = input.inputIdForSearch();
+        studentManage.removeStudent(id);
 
         System.out.print("Enter student new id(bốn chữ số): ");
-        String newId = input.inputIdForSearch();
+        String newId = input.inputIdForAdd();
         System.out.print("Enter student new name(viết hoa chữ cái đầu): ");
         String name = input.inputStr("[A-Z].+");
         System.out.print("Enter student new birthday(dd/mm/yyyy): ");
@@ -58,13 +59,13 @@ public class MenuForManager {
         System.out.print("Enter student new email: ");
         String mail = input.inputStr("[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+");
         System.out.print("Enter student new phone number(10 chữ số): ");
-        String phone = input.inputStr("^\\(\\d{2}\\)-\\(0\\d{9}\\)$");
+        String phone = input.inputStr("\\d{10}");
         System.out.print("Enter student new class name(viết hoa chữ cái đầu): ");
         String className = input.inputStr("C[01]\\d{3}K\\d");
 
         Student student = new Student(newId,name,birthDay,mail,phone,className);
 
-        studentManage.updateInfoStudent(id,student);
+        studentManage.addStudent(student);
     }
 
     public void menu4(){
@@ -78,7 +79,7 @@ public class MenuForManager {
         System.out.print("Enter teacher email: ");
         String mail = input.inputStr("[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+");
         System.out.print("Enter teacher phone number(10 chữ số): ");
-        String phone = input.inputStr("^\\(\\d{2}\\)-\\(0\\d{9}\\)$");
+        String phone = input.inputStr("\\d{10}");
         System.out.print("Enter teacher subject(viết hoa chữ cái đầu): ");
         String subject = input.inputStr("[A-Z].+");
         System.out.println("Enter teacher salary(chỉ chữ số): ");
@@ -99,9 +100,10 @@ public class MenuForManager {
     public void menu6(){
         System.out.print("Enter teacher id(bốn chữ số): ");
         String id = input.inputIdForSearch();
+        teacherManage.removeTeacher(id);
 
         System.out.print("Enter teacher new id(bốn chữ số): ");
-        String newId = input.inputIdForSearch();
+        String newId = input.inputIdForAdd();
         System.out.print("Enter teacher new name(viết hoa chữ cái đầu): ");
         String name = input.inputStr("[A-Z].+");
         System.out.print("Enter teacher new birthday(dd/mm/yyyy): ");
@@ -109,14 +111,14 @@ public class MenuForManager {
         System.out.print("Enter teacher new email: ");
         String mail = input.inputStr("[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+");
         System.out.print("Enter teacher new phone number(10 chữ số): ");
-        String phone = input.inputStr("^\\(\\d{2}\\)-\\(0\\d{9}\\)$");
+        String phone = input.inputStr("\\d{10}");
         System.out.print("Enter teacher new subject(viết hoa chữ cái đầu): ");
         String subject = input.inputStr("[A-Z].+");
         System.out.println("Enter teacher new salary(chỉ chữ số): ");
         double salary = Double.parseDouble(input.inputStr("\\d+"));
 
         Teacher teacher = new Teacher(newId,name,birthDay,mail,phone,subject,salary);
-        teacherManage.updateInfoTeacher(id,teacher);
+        teacherManage.addTeacher(teacher);
     }
     public void menu7(){
         System.out.print("Enter student id(bốn chữ số): ");

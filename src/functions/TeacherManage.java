@@ -37,10 +37,6 @@ public class TeacherManage {
 
     }
 
-    public void updateInfoTeacher(String oldId,Teacher newTeacherInfo){
-        removeTeacher(oldId);
-        addTeacher(newTeacherInfo);
-    }
 
     public void displayAllTeacher(){
         teacherList = (ArrayList<Teacher>) binary.readFile(BINARY_PATH);

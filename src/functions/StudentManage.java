@@ -39,10 +39,6 @@ public class StudentManage {
 
     }
 
-    public void updateInfoStudent(String oldId,Student newStudentInfo){
-        removeStudent(oldId);
-        addStudent(newStudentInfo);
-    }
 
     public void displayAllStudent(){
         studentList = (ArrayList<Student>) binary.readFile(BINARY_PATH);

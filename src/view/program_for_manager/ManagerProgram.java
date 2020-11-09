@@ -37,7 +37,7 @@ public class ManagerProgram {
             System.out.println("16.Xem các thông báo đã gửi tới học viên.");
             System.out.println("0.Exit.");
             System.out.print("Chose:");
-            int choice = Integer.parseInt(input.inputStr("\\d{1,2}"));                               //chua xong;
+            int choice = Integer.parseInt(input.inputStr("0?\\d|1[0-6]"));
             switch (choice){
                 case 1:
                     System.out.println("*************************");
